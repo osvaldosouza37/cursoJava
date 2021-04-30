@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="300.0" minHeight="350.0" prefHeight="300.0" prefWidth="725.0" style="-fx-background-color: #36a6c5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AgendaController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="49.0" prefHeight="305.0" prefWidth="550.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="50.0">
+        <tabs>
+          <Tab id="tab_cadastro" fx:id="tab_cadastro" closable="false" text="Cadastrar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="cad_nome" layoutX="86.0" layoutY="62.0" />
+                        <TextField fx:id="cad_sobrenome" layoutX="86.0" layoutY="101.0" />
+                        <TextField fx:id="cad_idade" layoutX="86.0" layoutY="136.0" />
+                        <TextField fx:id="cad_telefone" layoutX="86.0" layoutY="170.0" />
+                        <Label layoutX="14.0" layoutY="66.0" text="Nome:" />
+                        <Label layoutX="9.0" layoutY="105.0" prefHeight="17.0" prefWidth="83.0" text="Sobrenome:" />
+                        <Label layoutX="8.0" layoutY="140.0" prefHeight="17.0" prefWidth="48.0" text="Idade:" />
+                        <Label layoutX="9.0" layoutY="174.0" prefHeight="17.0" prefWidth="61.0" text="Telefone:" />
+                        <Button fx:id="bt_cadastro" layoutX="11.0" layoutY="219.0" mnemonicParsing="false" onAction="#cadastroContato" prefHeight="25.0" prefWidth="80.0" text="cadastrar" />
+                        <Button fx:id="bt_cancel" layoutX="120.0" layoutY="219.0" mnemonicParsing="false" onAction="#limpaFormulario" prefHeight="25.0" prefWidth="80.0" text="cancelar" />
+                        <TableView fx:id="agenda" layoutX="246.0" layoutY="21.0" prefHeight="174.0" prefWidth="446.0">
+                          <columns>
+                              <TableColumn fx:id="list_id" prefWidth="45.0" text="Id" />
+                            <TableColumn fx:id="list_nome" prefWidth="121.0" text="Nome" />
+                            <TableColumn fx:id="list_sobrenome" prefWidth="116.0" text="Sobrenome" />
+                              <TableColumn fx:id="list_idade" prefWidth="65.0" text="idade" />
+                              <TableColumn fx:id="list_telefone" prefWidth="98.0" text="telefone" />
+                          </columns>
+                        </TableView>	
+                        <Button fx:id="bt_edicao" layoutX="234.0" layoutY="219.0" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="80.0" text="listar" />
+                        <Button fx:id="bt_deletar" layoutX="444.0" layoutY="219.0" mnemonicParsing="false" onAction="#apagarCadastro" prefHeight="25.0" prefWidth="80.0" text="apagar" />
+                        <Label layoutX="13.0" layoutY="25.0" prefHeight="17.0" prefWidth="52.0" text="Id:" />
+                        <TextField fx:id="cad_id" editable="false" layoutX="86.0" layoutY="21.0" />
+                        <Button layoutX="340.0" layoutY="219.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="25.0" prefWidth="80.0" text="editar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="22.0" prefHeight="48.0" prefWidth="701.0" text="Agenda" textFill="WHITE" AnchorPane.bottomAnchor="300.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="Lucida Bright Demibold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
